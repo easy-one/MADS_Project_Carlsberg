@@ -7,13 +7,13 @@ body {
 	height:103px;
 	width:75px;
 	position: relative;
-	left:30%;
-	top:23.5%;
+	left: 26.7%;
+	top: 30.8%;
 	opacity: 0;
 	transition: opacity 2.5s 1s;
 }
 #nozzle-pour{
-	height:98%;
+	height:91%;
 	width:75px;
 	transition: height 0.2s cubic-bezier(0.600, 0.040, 1, 0.335) 0s;
 }
@@ -34,7 +34,7 @@ body {
 	transition: opacity 2.5s;
 	position: relative;
 	left:28%;
-	top:28.5%;
+	top:31.2%;
 	z-index: 1000;
 }
 #first-screen{
@@ -103,6 +103,7 @@ body {
 	}
 	#nozzle-pour{
 		width:152px;
+		height:98%;
 	}
 	#glass-full{
 		width:180px;

@@ -97,20 +97,20 @@ function startAnimation() {
             sound.play();
             id("glass-full").clip = phone ? 'rect(0, 90px, 213px, 0)' : 'rect(0, 180px, 426px, 0)';
             var np = id("nozzle-pour");
-            np.height = phone ? '139px' : '309px';
+            np.height = phone ? '117px' : '309px';
             hi.display = '';
             st.transition = 'opacity 2s';
             st.opacity = 0;
 
             setTimeout(function () {
-                np.clip = phone ? 'rect(0, 75px, 139px, 0)' : 'rect(0, 152px, 309px, 0)';
+                np.clip = phone ? 'rect(0, 75px, 117px, 0)' : 'rect(0, 152px, 309px, 0)';
                 np.transitionProperty = 'clip';
                 np.transitionDuration = '1.8s';
 
                 requestAnimationFrame(function () {
-                    np.clip = phone ? 'rect(139px, 75px, 139px, 0)' : 'rect(309px, 152px, 309px, 0)';
+                    np.clip = phone ? 'rect(117px, 75px, 117px, 0)' : 'rect(309px, 152px, 309px, 0)';
                 });
-            }, 2700);
+            }, 2600);
 
             var es = id("end-screen");
             var ei = id("end-image");

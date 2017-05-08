@@ -96,7 +96,7 @@ function startAnimation() {
             sound.play();
             id("glass-full").height = phone ? '213px' : '426px';
             var np = id("nozzle-pour");
-            np.height = phone ? '139px' : '309px';
+            np.height = phone ? '117px' : '309px';
             hi.display = '';
             st.transition = 'opacity 2s';
             st.opacity = 0;
@@ -108,7 +108,7 @@ function startAnimation() {
                 np.transitionDuration = '1.6s';
 
                 np.height = 0;
-            }, 2700);
+            }, 2600);
 
             var es = id("end-screen");
             var ei = id("end-image");
