@@ -55,7 +55,7 @@ function id(str) {
 }
 
 function startAnimation() {
-    sound.currentTime = 2;
+    sound.currentTime = iOS ? 4 : 2;
     var start = false,
         ge = id("glass-empty"),
         ne = id("nozzle-empty"),
@@ -116,13 +116,14 @@ function startAnimation() {
             es.display = 'block';
 
             setTimeout(function () {
+                var url = 'https://www.probablythebest.com.my/#!smooth-draught';
                 ei.opacity = 1;
                 es.top = '0';
                 document.getElementById("end-image").onclick = function () {
-                    myApp.sdk.linkOpener('http://www.carlsberg.com');
-                }
+                    myApp.sdk.linkOpener(url);
+                };
                 document.getElementById("end-screen").onclick = function () {
-                    myApp.sdk.linkOpener('http://www.carlsberg.com');
+                    myApp.sdk.linkOpener(url);
                 }
             }, 6200);
         }}

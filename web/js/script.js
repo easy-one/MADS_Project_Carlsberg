@@ -57,6 +57,7 @@ function id(str) {
 }
 
 function startAnimation() {
+    sound.currentTime = iOS ? 4 : 2;
     var start = false,
         ge = id("glass-empty"),
         ne = id("nozzle-empty"),
@@ -93,7 +94,6 @@ function startAnimation() {
             myApp.sdk.tracker('E', 'pour', 'pour');
 
             start = true;
-            sound.currentTime = iOS ? 4 : 2;
             sound.play();
             id("glass-full").clip = phone ? 'rect(0, 90px, 213px, 0)' : 'rect(0, 180px, 426px, 0)';
             var np = id("nozzle-pour");
@@ -118,15 +118,16 @@ function startAnimation() {
             es.display = 'block';
 
             setTimeout(function () {
+                var url = 'https://www.probablythebest.com.my/#!smooth-draught';
                 ei.opacity = 1;
                 es.left = '0';
                 es.opacity = 1;
                 document.getElementById("end-image").onclick = function () {
-                    myApp.sdk.linkOpener('http://www.carlsberg.com');
+                    myApp.sdk.linkOpener(url);
                     myApp.sdk.tracker('CTR', 'landing', 'landing');
-                }
+                };
                 document.getElementById("end-screen").onclick = function () {
-                    myApp.sdk.linkOpener('http://www.carlsberg.com');
+                    myApp.sdk.linkOpener(url);
                     myApp.sdk.tracker('CTR', 'landing', 'landing');
                 }
             }, 6200);
